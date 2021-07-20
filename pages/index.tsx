@@ -1,7 +1,7 @@
 import Head from "next/head";
 import PageGrid from "./../components/Elements/PageGrid";
 import NavBar from "../components/Navbar/Navbar";
-import styles from "../styles/Home.module.css";
+import LongBanner from "../components/Cards/LongBanner";
 
 export default function Home() {
   return (
@@ -19,6 +19,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar />
+      <LongBanner />
     </PageGrid>
   );
 }

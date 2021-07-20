@@ -36,7 +36,7 @@ export default function Sidebar({
       return;
     }
     window.document.body.style.overflowY = "auto";
-  }, [stateOpen]);
+  }, [stateOpen, turnScrollingOff]);
   return (
     <Fragment>
       {stateOpen ? (

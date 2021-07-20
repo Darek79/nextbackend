@@ -4,10 +4,10 @@ import {dbConnection} from "./middleware/db_connect";
 import {NextApiRequest, NextApiResponse} from "next";
 import axios from "axios";
 
-export default async (
+export default async function GetProduct (
   req: NextApiRequest,
   res: NextApiResponse
-) => {
+) {
   dbConnection();
   const prod = await Product.findById(
     "60b2d12df4e4b022e86ac0fb"
@@ -17,5 +17,5 @@ export default async (
   // );
   res.status(200).json(prod);
   console.log("ok");
-};
+}
 // _id: "60b2d12df4e4b022e86ac0fb",
