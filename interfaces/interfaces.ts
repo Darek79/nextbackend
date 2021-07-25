@@ -1,9 +1,37 @@
+import {
+  LinkHTMLAttributes,
+  ReactNode,
+  ButtonHTMLAttributes,
+} from "react";
+
 export interface BaseI {
-  children?: React.ReactNode;
+  children?: ReactNode;
   defaultStyle?: string;
   transition?: string;
   bgColor?: string;
   hoverState?: string;
+}
+export interface FigcaptionI extends StyleWrapper {
+  children?: ReactNode;
+  stylingSlogan?: string;
+  stylingMsg?: string;
+  stylingDsc?: string;
+  sloganTxt?: string;
+  msgTxt?: string;
+  dscTxt?: string;
+}
+
+export interface ButtonI
+  extends ButtonHTMLAttributes<HTMLButtonElement> {
+  buttonTxt?: string;
+  buttonStylesDefault?: string;
+  buttonBg?: string;
+  buttonPadding?: string;
+  buttonTextStyling?: string;
+}
+
+export interface GridWrapperI {
+  children: React.ReactNode;
 }
 
 export interface CompPropsI {
@@ -12,12 +40,16 @@ export interface CompPropsI {
   children?: React.ReactNode;
 }
 
-export interface LongBannerI {
-  url?: string;
-  buttonTxt?: string;
+export interface LinkCompI
+  extends LinkHTMLAttributes<HTMLLinkElement> {
+  children?: ReactNode;
 }
 
-export interface Style {
+export interface LongBannerI {
+  url?: any;
+}
+
+export interface StyleWrapper {
   styleWrapper?: string;
   styleDefault?: string;
   styleCustom?: string;

@@ -1,6 +1,4 @@
-interface GridWrapperI {
-  children: React.ReactNode;
-}
+import {GridWrapperI} from "./../../interfaces/interfaces";
 
 export default function GridWrapper({
   children,

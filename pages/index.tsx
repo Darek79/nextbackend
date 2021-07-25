@@ -1,4 +1,5 @@
 import Head from "next/head";
+import img from "./../public/assets/mainBanner.jpg";
 import PageGrid from "./../components/Elements/PageGrid";
 import NavBar from "../components/Navbar/Navbar";
 import LongBanner from "../components/Cards/LongBanner";
@@ -19,7 +20,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar />
-      <LongBanner />
+      <LongBanner url={img}/>
     </PageGrid>
   );
 }
