@@ -1,4 +1,4 @@
-import create_classes from "./../../helpers/helpers";
+import {create_classes} from "./../../helpers/helpers";
 import {ButtonI} from "./../../interfaces/interfaces";
 
 export default function Button({
@@ -7,6 +7,7 @@ export default function Button({
   buttonBg = "bg-mainTheme",
   buttonPadding = "px-6 py-1.5",
   buttonTextStyling = "tracking-wider",
+  buttonMargin,
   disabled = false,
 }: ButtonI): JSX.Element {
   return (
@@ -15,7 +16,8 @@ export default function Button({
         buttonStylesDefault,
         buttonBg,
         buttonPadding,
-        buttonTextStyling
+        buttonTextStyling,
+        buttonMargin
       )}
       disabled={disabled}
     >

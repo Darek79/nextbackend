@@ -20,7 +20,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar />
-      <LongBanner url={img}/>
+      <LongBanner
+        imgUrl={img}
+        sloganTxt="BUY ME"
+        msgTxt="Lorem Ipsum Lorem Ipsum"
+        dscTxt="product description"
+        buttonMargin="mt-2"
+        buttonTxt="Shop"
+        styleWrapper="absolute bottom-14 left-8"
+        stylingSlogan="text-2xl mb-2 font-bold tracking-wider"
+      />
     </PageGrid>
   );
 }

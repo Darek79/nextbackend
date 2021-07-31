@@ -1,5 +1,5 @@
-import {BaseI} from "./../../../Interfaces/interfaces";
-import class_creator from "./../../../helpers/helpers";
+import {BaseI} from "./../../../interfaces/interfaces";
+import {create_classes} from "./../../../helpers/helpers";
 export default function HoverElement({
   children,
   hoverState = "group-hover:h-1/2 group-hover:opacity-100",
@@ -9,7 +9,7 @@ export default function HoverElement({
 }: BaseI): JSX.Element {
   return (
     <div
-      className={class_creator(
+      className={create_classes(
         hoverState,
         transition,
         bgColor,

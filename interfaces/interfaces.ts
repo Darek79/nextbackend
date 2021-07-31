@@ -1,3 +1,4 @@
+import {BannerExtendedI} from "./interfaces";
 import {
   LinkHTMLAttributes,
   ReactNode,
@@ -28,6 +29,7 @@ export interface ButtonI
   buttonBg?: string;
   buttonPadding?: string;
   buttonTextStyling?: string;
+  buttonMargin?: string;
 }
 
 export interface GridWrapperI {
@@ -46,7 +48,7 @@ export interface LinkCompI
 }
 
 export interface LongBannerI {
-  url?: any;
+  imgUrl?: any;
 }
 
 export interface StyleWrapper {
@@ -91,3 +93,14 @@ export interface ImageCardI {
 }
 
 export type BasketReducerI = {id: string; amount: number}[];
+
+type Mixed = LinkCompI & ButtonI;
+
+export interface BannerExtendedI
+  extends LongBannerI,
+    Mixed,
+    FigcaptionI {}
+
+export interface TwoImagesI {
+  boxes: Array<BannerExtendedI>;
+}

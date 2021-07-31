@@ -1,5 +1,5 @@
 import {Fragment, useEffect} from "react";
-import class_creator from "./../../helpers/helpers";
+import {create_classes} from "./../../helpers/helpers";
 interface SidebarI {
   stateOpen?: boolean;
   stateFn?: () => void;
@@ -41,7 +41,7 @@ export default function Sidebar({
     <Fragment>
       {stateOpen ? (
         <div
-          className={class_creator(
+          className={create_classes(
             defaultStyle,
             sideStart,
             delayDuration,
@@ -56,7 +56,7 @@ export default function Sidebar({
         </div>
       ) : (
         <div
-          className={class_creator(
+          className={create_classes(
             defaultStyle,
             sideEnd,
             delayDuration,

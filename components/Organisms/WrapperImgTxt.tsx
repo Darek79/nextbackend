@@ -1,13 +1,13 @@
 import Image from "next/image";
-import {showStyleTernary} from "./../../helpers/helpers";
+import {create_classes} from "../../helpers/helpers";
 import LinkWrapper from "../Elements/Link";
 import Figcaption from "../Elements/Figcaption";
-import Button from "./../Elements/Button";
-import {Debounce} from "./../../hooks/Debounce";
+import Button from "../Elements/Button";
+import {Debounce} from "../../hooks/Debounce";
 
-import {BannerExtendedI} from "./../../interfaces/interfaces";
+import {BannerExtendedI} from "../../interfaces/interfaces";
 
-export default function LongBanner({
+export default function WrapperImgTxt({
   imgUrl = "https://via.placeholder.com/450x150",
   buttonTxt = "",
   buttonMargin,
@@ -18,16 +18,13 @@ export default function LongBanner({
   stylingMsg,
   stylingDsc,
   styleWrapper,
+  styleCustom,
   href,
 }: BannerExtendedI): JSX.Element {
   const widthLimit = Debounce(500);
   return (
-    <figure
-      className={showStyleTernary(
-        widthLimit,
-        "col-start-2 relative w-full h-[28rem] mb-2",
-        "col-start-2 relative w-full h-96 mb-2"
-      )}
+    <section
+      className={create_classes(styleWrapper, styleCustom)}
     >
       <LinkWrapper href="/category">
         <Image
@@ -55,6 +52,6 @@ export default function LongBanner({
           />
         </Figcaption>
       </LinkWrapper>
-    </figure>
+    </section>
   );
 }

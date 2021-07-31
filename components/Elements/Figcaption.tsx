@@ -1,9 +1,9 @@
-import create_classes from "../../helpers/helpers";
+import {create_classes} from "../../helpers/helpers";
 import {FigcaptionI} from "./../../interfaces/interfaces";
 
 export default function Figcaption({
   children,
-  stylingSlogan = "text-3xl font-bold",
+  stylingSlogan = "text-2xl mb-2 font-bold tracking-wider",
   stylingMsg = "",
   stylingDsc = "text-gray-500",
   sloganTxt = "BUY ME",
